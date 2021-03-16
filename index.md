@@ -1,37 +1,56 @@
-## Welcome to GitHub Pages
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>首页</title>
+<link rel="stylesheet" href="css/main.css" type="text/css" />
+<!-- 导入首页轮播图css和js脚本 -->
+<link type="text/css" href="css/autoplay.css" rel="stylesheet" />
+<script type="text/javascript" src="js/autoplay.js"></script>
 
-You can use the [editor on GitHub](https://github.com/cdw151217/rj183/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+</head>
+<body class="main">
+	<!-- 1.网上书城顶部 start -->
+<div id="divhead">
+	<table cellspacing="0" class="headtable">
+		<tr>
+			<td>
+				<a href="#">
+					<img src="images/logo.png" width="200" height="60" border="0" /> 
+				</a>
+			</td>
+			<td style="text-align:right">
+				<img src="images/cart.gif" width="26" height="23" style="margin-bottom:-4px" />&nbsp;<a href="#">购物车</a> 
+				| <a href="#">帮助中心</a> 
+				| <a href="#">我的帐户</a>
+				| <a href="register.html">新用户注册</a>							
+			 
+			</td>		
+		</tr>
+	</table>
+</div>
+	<!-- 网上书城顶部  end -->
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+	<!--2. 网上书城菜单列表  start -->
+<div id="divmenu">
+		<a href="#">文学</a> 
+		<a href="#">生活</a> 
+		<a href="#">计算机</a> 
+		<a href="#">外语</a> 
+		<a href="#">经管</a>
+		<a href="#">励志</a> 
+		<a href="#">社科</a> 
+		<a href="#">学术</a> 
+		<a href="#">少儿</a>
+		<a href="#">艺术</a> 
+		<a href="#">原版</a> 
+		<a href="#">科技</a> 
+		<a href="#">考试</a> 
+		<a href="#">生活百科</a> 
+		<a href="#" style="color:#FFFF00">全部商品目录</a>		
+</div>
+  </body>
+</html>
 
-### Markdown
+					
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/cdw151217/rj183/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
