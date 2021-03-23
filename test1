@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="/js/vue.js" type="text/javascript" charset="UTF-8"></script>
+	</head>
+	<body>
+		<div id="app">
+			<li v-if = "scron >=90">优秀</li>
+			<li v-if = "scron >=80">合格</li>
+			<li v-if = "scron >=70">一般</li>
+			<li v-if = "scron <60">不及格</li>
+			{{row}}
+		</div>
+		<script type="text/javascript">
+			let v = new Vue({
+				el: '#app',
+				data: {
+					return () {
+						scron: '86',
+						row: Math.floor(Math.random()*10),
+					}
+				}
+			})
+		</script>
+	</body>
+</html>
