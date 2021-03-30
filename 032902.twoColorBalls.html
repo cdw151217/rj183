@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		
+		<div id="app">
+			<input type="button" value="点我看看" @click="red1=Math.ceil(Math.random()*50),red2=Math.ceil(Math.random()*50),red3=Math.ceil(Math.random()*50),red4=Math.ceil(Math.random()*50),red5=Math.ceil(Math.random()*50),blu=Math.ceil(Math.random()*10)" />
+			红球：{{red1}},{{red2}},{{red3}},{{red4}},{{red5}}  ,蓝球：{{blu}}
+		</div>
+		
+		<script type="text/javascript">
+			let vm = new Vue({
+				el: '#app',
+				data(){
+					return {
+						red1: '',
+						red2: '',
+						red3: '',
+						red4: '',
+						red5: '',
+						blu: '',
+					}
+				}
+			})
+		</script>
+		
+	</body>
+</html>
