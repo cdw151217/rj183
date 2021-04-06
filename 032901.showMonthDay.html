@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="app">
+			<input v-model="userNames" type="text" name="" id="" value="" /><br />
+			您输入的月份为{{userNames}},对应的天数为{{months[userNames-1]}}！
+		</div>
+		
+		<script type="text/javascript">
+			let vm = new Vue({
+				el: '#app',
+				data: {
+					userNames: 1,
+					months: [31,28,31,30,31,30,31,31,30,31,30,31]
+				}
+			})
+		</script>
+		
+	</body>
+</html>
