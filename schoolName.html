@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="app">
+					<p>请输入学校名称</p>
+					<input type="text" v-model="i" />
+					<p v-for="s in schools" v-if="s.name == i">
+						{{i}}是{{s.age}}
+					</p>
+				</div>
+				<script type="text/javascript">
+					let v=new Vue({
+						el:'#app',
+						data:{
+							i: '',
+							schools:[
+								{name: '北京理工大学', age: '985、211大学'},
+								{name: '西安交通大学', age: '985、211大学'},
+								{name: '中国人民大学', age: '985、211大学'},
+								{name: '国防科技大学', age: '985、211大学'},
+								{name: '北京外国语大学', age: '211大学'},
+								{name: '北京工业大学', age: '211大学'},
+								{name: '华东理工大学', age: '211大学'},
+								{name: '上海大学', age: '211大学'},
+							]
+						}
+					})
+				
+				</script>
+	</body>
+</html>
