@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+		
+		<style>
+		    table{
+		        border-collapse: collapse;
+		    }
+		    table,table tr td { 
+		        border:1px solid #00557f; 
+		    }
+		    table tr td{
+		        padding: 5px 10px;
+		    }
+		</style>
+		
+	</head>
+	<body>
+		<div id="app">
+			<p>请输入菜品名称</p>
+			<input type="text" v-model="n" />
+			<table v-for="f in foods" v-if="f.name == n">
+				<tr>
+					<td>菜品</td>
+					<td>价格</td>
+					<td>下单电话</td>
+				</tr>
+				<tr>
+					<td>{{f.name}}</td>
+					<td>{{f.price}}</td>
+					<td>{{f.number}}</td>
+				</tr>
+			</table>
+		</div>
+		
+		<script type="text/javascript">
+			let v = new Vue({
+				el: '#app',
+				data: {
+					n: '',
+					foods:[
+						{name: '红烧肉', price: 36.9, number: 1830123},
+						{name: '可乐鸡', price: 28.8, number: 1830124},
+						{name: '番茄炒鸡蛋', price: 18.6, number: 1830125},
+						{name: '玉米炒青瓜', price: 16.5, number: 1830126},
+						{name: '砂锅酸菜鱼', price: 58.9, number: 1830127},
+					],
+				},
+			});
+		</script>
+	</body>
+</html>
