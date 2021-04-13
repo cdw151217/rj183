@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="app">
+			<input v-on:click="user()" type="button" value="点我看看"/><br>
+			<p v-for="u in users" v-if="u.id == n">恭喜{{u.name}}成为幸运用户！</p>
+			
+			
+			
+		</div>
+		
+		<script type="text/javascript">
+			let v=new Vue({
+				el:'#app',
+				data:{
+					n:'',
+					users:[
+						{id:1, name:'小明'},
+						{id:2,name:'小红'},
+						{id:3,name:'小王'},
+						{id:4,name:'小陈'},
+						{id:5,name:'小刘'},
+					]
+				},
+				methods:{
+					user(){
+						this.n=Math.ceil(Math.random()*5)
+					},
+				},
+			});
+		</script>
+	</body>
