@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+		<style>
+		    table{
+		        border-collapse: collapse;
+		    }
+		    table,table tr td { 
+		        border:1px solid #ccc; 
+		    }
+		    table tr td{
+		        padding: 5px 10px;
+		    }
+		</style>
+	</head>
+	<body>
+		<div id="app">
+			<p>请输入国家代码</p>
+			<input type="text" v-model="c" />
+			<table v-for="cs in countrys" v-if="cs.code == c">
+				<tr>
+					<td>国家名</td>
+					<td>首都</td>
+					<td>代码</td>
+				</tr>
+				<tr>
+					<td>{{cs.name}}</td>
+					<td>{{cs.capital}}</td>
+					<td>{{cs.code}}</td>
+				</tr>
+			</table>
+		</div>
+		
+		<script type="text/javascript">
+			let v = new Vue({
+				el: '#app',
+				data: {
+					c: '',
+					countrys:[
+						{name: '中国', capital: '北京', code: '0123'},
+						{name: '巴基斯坦', capital: '伊斯兰堡', code: '0124'},
+						{name: '马来西亚', capital: '吉隆坡', code: '0125'},
+						{name: '泰国', capital: '曼谷', code: '0126'},
+						{name: '伊朗', capital: '德黑兰', code: '0127'},
+					],
+				},
+			});
+		</script>
+	</body>
+</html>
