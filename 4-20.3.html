@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="app">
+			戳我脸蛋<br />
+			<img src="./img/420.jpg" @click="show()">
+		
+		</div>
+		<script type="text/javascript">
+			let vm = new Vue({
+				el: '#app',
+				data: {
+					
+				},
+				methods:{
+					show(){
+						if(event.clientX > 310 && event.clientX < 320 && event.clientY > 143 && event.clientY < 153){
+							alert("答对啦，宝贝！");
+						}
+					}
+				}
+			})
+		</script>
+	</body>
+</html>
