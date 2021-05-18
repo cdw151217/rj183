@@ -9,13 +9,16 @@
 		<canvas id="myCanvas" width="660" height="420"></canvas>
 		<div id="app">
 			<input type="button" value="有本事你别点我" @click="show()"/>
+			<input type="text"  v-model="number"/>
 		</div>
 		
 		<script type="text/javascript">
 			let v = new Vue({
 				el: '#app',
-				data: {
-					
+				data() {
+					return {
+						number: 0
+					}
 				},
 				methods: {
 					show(){
@@ -25,7 +28,7 @@
 						let con = canvas.getContext("2d");
 						//起始一条路径，或重置当前路径
 						con.beginPath();
-						con.arc(100,100,50,0,2 * Math.PI);
+						con.arc(100,100,this.number,0,2 * Math.PI);
 						//绘制已定义的路径
 						con.stroke();
 					}
